@@ -1,0 +1,80 @@
+﻿* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  background: linear-gradient(160deg, #325d82 0%, #8fc4ac 48%, #f2d069 100%);
+  font-family: Arial, "Microsoft YaHei", sans-serif;
+  touch-action: none;
+}
+
+body {
+  display: grid;
+  place-items: center;
+}
+
+.game-shell {
+  position: relative;
+  width: min(100vw, calc(100vh * 376 / 666));
+  height: min(100vh, calc(100vw * 666 / 376));
+  max-width: 430px;
+  max-height: 760px;
+  overflow: hidden;
+  border-radius: 18px;
+  box-shadow: 0 28px 70px rgba(25, 36, 42, 0.32);
+  background: #6ab68f;
+}
+
+canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  image-rendering: auto;
+}
+
+.speed-button {
+  position: absolute;
+  right: 14px;
+  top: 76px;
+  width: 48px;
+  height: 32px;
+  border: 0;
+  border-radius: 8px;
+  color: #62390c;
+  background: linear-gradient(#fff8c8 0%, #f2c55a 54%, #d38a24 100%);
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.55),
+    inset 0 -2px 0 rgba(125, 67, 8, 0.18),
+    0 3px 0 rgba(117, 71, 10, 0.42);
+  font-size: 14px;
+  font-weight: 900;
+  letter-spacing: 0;
+  pointer-events: auto;
+  touch-action: manipulation;
+  z-index: 3;
+}
+
+.speed-button.is-fast {
+  color: #fff8cf;
+  background: linear-gradient(#ff6d58 0%, #d33c35 58%, #8f241e 100%);
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.35),
+    inset 0 -2px 0 rgba(76, 0, 0, 0.22),
+    0 3px 0 rgba(95, 27, 12, 0.5);
+}
+
+.speed-button:active {
+  transform: translateY(2px);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.35),
+    inset 0 -1px 0 rgba(125, 67, 8, 0.18),
+    0 1px 0 rgba(117, 71, 10, 0.5);
+}
+
+
+
