@@ -57,7 +57,7 @@ let launchTimer = 0;
 let launchIndex = 0;
 let aimAngle = -Math.PI / 2.25;
 let pointerX = W / 2;
-let speedScale = 4;
+let speedScale = 3;
 let gameOver = false;
 let message = "";
 let introShown = false;
@@ -1031,7 +1031,7 @@ function handleControlAction(action) {
   } else if (action === "leaderboard") {
     showLeaderboard = !showLeaderboard;
   } else if (action === "speed") {
-    speedScale = speedScale === 4 ? 2 : 4;
+    speedScale = speedScale === 4 ? 3 : 4;
   }
 }
 
